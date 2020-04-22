@@ -67,6 +67,12 @@
 
 \lstset{style=mystyle}
 
+\makeatletter
+\newcommand{\skipitems}[1]{%
+  \addtocounter{\@enumctr}{#1}%
+}
+\makeatother
+
 %%% BEGIN DOCUMENT
 \begin{document}
 \maketitle
@@ -187,6 +193,7 @@ Examples of the required types of behaviors are:
 	\item represents considerable/significant understanding, application, and incorporation of the material which would prepare a student to be successful in next level courses, graduate school or employment. The student participates in the Learning Model as applied in the course. 
 	\item represents sufficient understanding of subject matter. The student demonstrates minimal initiative to be prepared for class. Sequenced courses could be attempted, but mastering new materials might prove challenging. The student participates only marginally in the Learning Model.
 	\item represents poor performance and initiative to learn and understand and apply course materials. Retaking a course or remediation may be necessary to prepare for additional instruction in this subject matter. 
+	\skipitems{1}
 	\item represents failure in the course.
 \end{enumerate}
 
@@ -351,7 +358,6 @@ Solution requiring Code
 \lstset{language=Erlang}
 \lstinputlisting{support_files/gcd.erl}%file name and location
 
- 
 \end{enumerate}
 
 \end{document}
