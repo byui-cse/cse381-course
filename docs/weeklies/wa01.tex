@@ -124,7 +124,7 @@ Levitin states that one of these problem types is the most difficult to solve. W
     (loop for i from 0 below (length doors)
           when (zerop (mod i n))
           do (aset doors i (if (aref doors i) nil t))))
-
+ 
   (defun flip-100 ()
     (loop for i from 1 to 100 do (flip-doors i))
     (substring (mapconcat (lambda (x) (if x "1" "0")) doors "") 1))
