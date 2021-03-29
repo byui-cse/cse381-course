@@ -28,44 +28,20 @@
 \definecolor{keycolor}{rgb}{0.007,0.01,1.0}
 \definecolor{itemcolor}{rgb}{0.01,0.0,0.49}
  
-\lstdefinestyle{mystyle}{
-    %backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{keycolor},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{stringcolor},
-    basicstyle=\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
+\lstset{
+ basicstyle=\ttfamily,
+ columns=fullflexible,
+ upquote,
+ keepspaces,
+ literate={*}{{\char42}}1
+ {-}{{\char45}}1
 }
- 
-\lstset{style=mystyle}
-
-\lstdefinelanguage{Swift}{
-  keywords={associatedtype, class, deinit, enum, extension, func, import, init, inout, internal, let, operator, private, protocol, public, static, struct, subscript, typealias, var, break, case, continue, default, defer, do, else, fallthrough, for, guard, if, in, repeat, return, switch, where, while, as, catch, dynamicType, false, is, nil, rethrows, super, self, Self, throw, throws, true, try, associativity, convenience, dynamic, didSet, final, get, infix, indirect, lazy, left, mutating, none, nonmutating, optional, override, postfix, precedence, prefix, Protocol, required, right, set, Type, unowned, weak, willSet},
-  ndkeywords={class, export, boolean, throw, implements, import, this},
-  sensitive=false,
-  comment=[l]{//},
-  morecomment=[s]{/*}{*/},
-  morestring=[b]',
-  morestring=[b]"
-}
-
-\lstset{emph={Int,count,abs,repeating,Array}, emphstyle=\color{itemcolor}}
 
 \title{CSE 381 Syllabus and Portfolio}
 
 \date{\today}
 
-\lstset{style=mystyle}
+
 
 \makeatletter
 \newcommand{\skipitems}[1]{%
@@ -128,13 +104,13 @@ You are required to\ldots
 
 \section{Course Periodicity}
 This course has a weekly period, i.e. you can count on knowing ahead of time what you will be doing each day of each week.
-Each class period consists of three 30 minute sections. On Mondays these sections are:
+Each class period consists of three 20 minute sections. On the first day of class these sections are:
 \begin{enumerate}
 	\item \textit{\textbf{Presentation}} \\A time where I will add depth information to the preparation material you've read \textbf{before class}. 
 	\item \textit{\textbf{Class Directed Learning}}\\You will participate in a class-wide activity that reinforces what you've read and what I've shown you.
 	\item \textit{\textbf{Create and Explain Solutions to Exercises}}\\During this time period, as a team of 2 or 3 you will create a solution to an exercise of your choice from the list of exercises for this week. On completion of your exercise you, as an individual, will explain your solution to someone not on your team until they understand your solution.
 \end{enumerate}
-On Wednesdays, the three sections are:
+On the second day of class, the three sections are:
 \begin{enumerate}
 	\item \textit{\textbf{Answer Questions}}\\ I will answer questions that have been submitted to the course's channel.
 	\item \textit{\textbf{Class Directed Learning}}\\You will participate in a class-wide activity that reinforces what you've read and what I've shown you.
@@ -318,8 +294,16 @@ Solution
 \item Some Other Exercise or Problem Description.
 
 Solution requiring Code
-\lstset{language=Erlang}
-\lstinputlisting{support_files/gcd.erl}%file name and location
+
+\begin{lstlisting}
+(defn factorial
+  ([n]                    ; when only one argument is passed in
+    (factorial n 1))
+  ([n acc]                ; when two arguments are passed in
+    (if  (= n 0)  acc
+    (recur (dec n) (* acc n)))))
+\end{lstlisting}
+%\lstinputlisting{support_files/gcd.erl}%file name and location
 
 \end{enumerate}
 
