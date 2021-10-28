@@ -92,14 +92,26 @@ If, and \textit{only if} you can truthfully assert the truthfulness of each stat
 
 \end{itemize}
 \subsection{Memory Self-Check}
-Which hash function is better for a key that is a character string? (The
-  parameter m is the modulus, the size of the hash table.)
-\begin{itemize}
-	\item hash-function-1, or
-	\item hash-function-2?
-\end{itemize}
+For $k$ being a letter of some alphabet, let the function $ord\ ::\ k\rightarrow a:::Intger$ have a value that is the position of $k$ in that alphabet.
+ 
+Which hash function below produces a hash with fewer potential collisions?
+\begin{enumerate}
+	\item \begin{align*} 
+		  hash\ ::&\ [k]\rightarrow a:::Integer\\
+		  \\
+		  hash\ ::&\ [h\mid t]\rightarrow\\
+		  	& ord\ h +hash\ t\end{align*}, or
+	\item  Let c be greater than any element of the alphabet and $mod\ ::\ a\ b$ be the modulo function a mod b.
+	\begin{align*}
+		hash\ ::&\ [k]\rightarrow a:::Integer\\
+		  \\
+		  hash\ ::&\ [h\mid t]\rightarrow\\
+		  	&mod\ h\cdot c+ (ord\ h)\ m
+	\end{align*}
+	Why?
+\end{enumerate}
 
-\lstinputlisting{../support_files/hashes.lsp}%file name and location
+
 
  \section{Week 07 Exercises}
 \subsection{ Exercise 1 on page 274} 
@@ -112,8 +124,6 @@ Which hash function is better for a key that is a character string? (The
 
 \section{Week 07 Problems}
 \subsection{Not in the Book}
-The birthday problem is implemented in the following code. Study it, then
-  answer the question, why does this code not give 23 as the answer?
-\lstinputlisting{../support_files/birthday.lsp}
+Consider a significant algorithm you have implemented in the past. Review it to see if there is a way to use additional memory to speed up the calculation of the result.
 
 \end{document}
