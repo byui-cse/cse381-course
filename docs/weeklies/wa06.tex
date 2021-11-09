@@ -93,7 +93,7 @@ If, and \textit{only if} you can truthfully assert the truthfulness of each stat
 \href{https://www.lds.org/scriptures/bofm/ether/12.4}{Ether 12:27 \& 28} teaches us much about Christ, faith, humility, and our weaknesses. It states that Christ makes our weakness into strengths, not us. How might  understanding this scripture and The Lord\textquoteright s admonition \href{https://www.lds.org/scriptures/nt/luke/21.18-19?lang=eng&clang=eng#p17}{\say{In your patience possess ye your souls}} change your view of who you are, your relationship with Christ, and how you treat yourself when you succumb to weakness? (FYI, it does not justify the \say{eat, drink, and be merry} approach to life.)
 
 
- \section{Week 04 Exercises}
+ \section{Week 06 Exercises}
 \subsection{ Exercise 2 on page 205} 
 \subsection{ Exercise 1 on page 216} 
 \subsection{Exercise 2 on page 225} 
@@ -104,31 +104,20 @@ If, and \textit{only if} you can truthfully assert the truthfulness of each stat
 
 \section{Week 06 Problems}
 
-Here is a straightforward implementation of a min-max algorithm in a familiar
-  language:
+What is the complexity of the min-max algorithm declared and defined below?
 
-\lstset{language=C++}
-\lstinputlisting{../support_files/s_min_max.cpp}%file name and location
-
-  What is its efficiency?
-
-  The divide-and-conquer recurrence relation for the number of
-  comparisons in the min-max algorithm (shown below in elisp) is:
-
-  $T(n) = 2T(n/2) + 2, T(2) = 1$.
-
-  Solve this recurrence relation using telescoping (like Bro. Neff did) or backward substitution (like Bro. Barney did). Then answer this question:
-
-  Do each of the following two implementations work the same? Compare, through evidence, if any have a slightly-more-efficient-than-straightforward efficiency.
+\begin{align*}
+min\_max\ ::&\ [a]\ a\ a\rightarrow \{a,a\}\\
+\\
+min\_max\ ::&\ [] min\_accum\ max\_accum\rightarrow \\
+		&\{min\_accum,max\_accum\};\\
+min\_max\ ::&\ [h\mid t] min\_accum\ max\_accum\ when\ h\le min\_accum\rightarrow \\
+		&min\_max\ t\ h\ max\_accum;\\
+min\_max\ ::&\ [h\mid t] min\_accum\ max\_accum\ when\ h\ge max\_accum\rightarrow \\
+		&min\_max\ t\ min\_accum\ h.
+\end{align*}
 
 
-\lstset{language=C++}
-\lstinputlisting{../support_files/r_min_max.cpp}%file name and location
-
-
-\lstset{language=Swift}
-\lstinputlisting{../support_files/r_min_max.el}%file name and location
-  
 \subsection{Exercise 1 on page 205} 
 \subsection{Exercise 3 on page 216}
 \subsection{Exercise 9 on page 249}
