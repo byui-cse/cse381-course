@@ -105,48 +105,13 @@ Levitin states that one of these problem types is the most difficult to solve. W
 \section{Week 01 Exercises}
 \subsection{Exercise 4 on Page 7}
 \subsection{Exercise 8 on page 8}
-\subsection{Exercise 4 on Page 17} Write code instead of psuedocode.
+\subsection{Exercise 4 on Page 17} Write Clojure code instead of the pseudocode asked for.
 \subsection{Exercise 2 on page 23}
 \subsection{Exercise 2 on page 37}
 \subsection{Exercise 9 on page 38}
  
  
 \section{Week 01 Problems}
-\subsection{Exercise 12 on page 8} 
-
-\subsubsection{How might this elisp code help in answering the questions posed in exercise 12?}$ $ 
-\begin{lstlisting}[language=lisp, frame=single] 
-(require 'cl) ;; for loop
-
-  (defvar doors (make-bool-vector 101 nil))
-
-  (defun flip-doors (n)
-    (loop for i from 0 below (length doors)
-          when (zerop (mod i n))
-          do (aset doors i (if (aref doors i) nil t))))
- 
-  (defun flip-100 ()
-    (loop for i from 1 to 100 do (flip-doors i))
-    (substring (mapconcat (lambda (x) (if x "1" "0")) doors "") 1))
-\end{lstlisting}
-\pagebreak
-\subsubsection{Same algorithm in Swift.}$ $
-
-\begin{lstlisting}[language=Swift, frame=single]
-var doors = Array(repeating: 0, count: 101)
-func flip_doors(n:Int){
-    for i in 0..<doors.count{
-        if i % n == 0 {
-            doors[i] = abs(doors[i]-1)
-        }
-    }
-}
-for i in 1..<doors.count {
-    flip_doors(n: i)
-}
-print(doors.compactMap{String($0)}.joined())
-\end{lstlisting}
-
 \subsection{Exercise 9 on page 25} 
 \subsection{Create Three Different Algorithms to Solve this Problem}
 Given two positive numbers A and B, where A is greater than B, find a way to \textit{break up} A into B unequal pieces.\\\\For example, if A = 34 and B = 4, then four unequal pieces of A are 6, 7, 9 and 12. These are unequal because there are no duplicate numbers. They break up (or sum up to) 34 because 6 + 7 + 9 + 12 = 34. The numbers representing the pieces (e.g., 6, 7, 9 and 12) must be positive integers (1, 2, 3, etc.), which excludes zero. Note that some pairs of numbers don't work, e.g., 5 and 3, so be sure to error-check that case.

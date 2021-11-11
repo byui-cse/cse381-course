@@ -11,6 +11,8 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage{graphicx}
+\graphicspath{ {../support_files/} }
 
 \usepackage{color}
  
@@ -108,8 +110,11 @@ Write code in a language of your choice instead of pseudocode.
 
   Prim\textquoteright{}s and Kruskal\textquoteright{}s algorithms are quite similar. The only real difference is in the set of edges available for inclusion in the tree at each step. In Prim\textquoteright{}s algorithm, only those edges that are adjacent to edges already in the tree (and not completing simple cycles) may be added (so that, as a result, all the intermediate stages are trees). In Kruskal\textquoteright{}s algorithm, any edge that does not complete a simple cycle may be added (so that the intermediate stages may be forests and not trees). 
   
-  Create minimum spanning trees for 
-  \href{https://firstthreeodds.org/mstgraphs/mstgraph1.png}{ this } and \href{https://firstthreeodds.org/mstgraphs/mstgraph2.png}{this} graph. When applicable, use lexicographical order to break ties. List the edges in the order chosen by each algorithm, and find the total weight.
+Create minimum spanning trees for each of these two graphs.
+
+  \includegraphics[scale=0.5]{mstgraph1}
+  \includegraphics[scale=0.5]{mstgraph2}
+When applicable, use lexicographical order to break ties. List the edges in the order chosen by each algorithm, and find the total weight.
 
 
   

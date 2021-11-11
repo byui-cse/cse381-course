@@ -80,11 +80,8 @@ If, and \textit{only if} you can truthfully assert the truthfulness of each stat
  \item I know why it is \textbf{false} to say that applicability of dynamic programming to an optimization problem requires the problem to satisfy the \textit{principle of suboptimality}: a suboptimal solution to any of its instances must be made up of suboptimal solutions to its subinstances.
  \item I know how to discover that one of the earliest applications of dynamic programming is an algorithm that solves the traveling salesman problem in time $\mathcal{O}(n^2 2^n)$.
  \item I know why it is \textbf{false} to say that solving a \textbf{continuous} knapsack problem by a dynamic programming algorithm exemplifies an application of this technique to difficult problems of combinatorial optimization.
- \item I know how \textit{memory functions} such as this Fibonacci C++ code constitute a space-grabbing but time-saving technique.
- \lstinputlisting[language=C]{../support_files/fib.c}%file name and location
- \item I know how \textit{memory functions} such as this Elisp Knapsack code constitute a space-grabbing but time-saving technique.
- \lstinputlisting{../support_files/knapsack.elsp}%file name and location
- 
+ \item I know that \textit{memory functions} use more memory in order to run faster.
+  
 \item I know how many \textit{distinct} binary search trees can be constructed for a set of 4 orderable keys: A, B, C and D.
 \item I know how to draw all optimal BSTs for a set of 4 orderable keys.
 \item I know how to label each tree I drew with its unique level-order
@@ -121,7 +118,7 @@ Compare and contrast \textbf{dynamic programming} and \textbf{divide and conquer
 
 \section{Week 08 Problems}
 \subsection{Not in the Book}
-In a language of your choice, implement the search elements of an optimal binary search tree for a set of \textit{n} keys. Test the time efficiency of your code for the following cases:
+In Clojure, implement the search elements of an optimal binary search tree for a set of \textit{n} keys. Test the time efficiency of your code for the following cases:
 \begin{enumerate}[(a)]
 \item Search for the largest element.
 \item Search for the smallest element.
